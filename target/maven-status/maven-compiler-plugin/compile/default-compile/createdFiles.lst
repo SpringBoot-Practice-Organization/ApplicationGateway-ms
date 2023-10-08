@@ -1,0 +1,3 @@
+com\application\springcloud\APIGateway\ApplicationGatewayms\Configuration\SwaggerConfiguration.class
+com\application\springcloud\APIGateway\ApplicationGatewayms\ApplicationGatewayMsApplication.class
+com\application\springcloud\APIGateway\ApplicationGatewayms\Configuration\SpringSecurityConfiguration.class

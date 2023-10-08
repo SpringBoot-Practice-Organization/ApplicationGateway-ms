@@ -1,0 +1,28 @@
+server:
+  port: 8091
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: spring-cloud-API-Gateway,eureka-server
+  cloud:
+    gateway:
+      routes:
+        - id: Customer-ms
+          uri: http://localhost:8093/customer/**
+          predicates:
+          - Method= GET
+        - id: Eureka-Server-ms
+          uri: http://localhost:8092/eurek
+          predicates:
+          - Method= GET
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8092/eureka/
+  instance:
+    preferIpAddress: true
+    lease-renewal-interval-in-seconds: 30
+
